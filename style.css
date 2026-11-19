@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  width: 100px;
+  padding: 6px;
+  background-color: #6d597a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.points-text {
+  margin-bottom: 0px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  width: 100%;
+  height: 100dvh;
+}
+
+.menu {
+  width: 250px;
+  height: 100%;
+  background-color: #edede9;
+}
+
+.menu-content {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.playground-btns-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.difficulty-container {
+  margin-top: 22px;
+}
+
+.difficulty-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+#app {
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#canvas-container {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1023px) {
+  body {
+    overflow: auto;
+  }
+
+  .app-layout {
+    display: none;
+  }
+
+  body::before {
+    content: "AIM LAB CLONE requiere una pantalla de laptop o mayor.";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 24px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+  }
+}

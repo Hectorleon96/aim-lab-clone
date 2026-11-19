@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>AIM LAB CLONE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app-layout">
+      <aside id="menu" class="menu">
+        <div class="menu-content">
+          <header class="menu-header">
+            <div>
+              <h1>AIM LAB CLONE</h1>
+              <p class="points-text">
+                Points: <span id="points-counter">0</span>
+              </p>
+            </div>
+          </header>
+
+          <button id="restart-btn">Restart</button>
+
+          <div class="difficulty-container">
+            <strong>Difficulty:</strong>
+
+            <form id="controls-difficulty-form" class="difficulty-controls">
+              <label>
+                Easy
+                <input
+                  type="radio"
+                  name="difficulty-option"
+                  value="10"
+                  checked
+                />
+              </label>
+              <label>
+                Medium
+                <input type="radio" name="difficulty-option" value="9" />
+              </label>
+              <label>
+                Hard
+                <input type="radio" name="difficulty-option" value="8" />
+              </label>
+            </form>
+          </div>
+
+          <div class="difficulty-container">
+            <strong>Shoot sound:</strong>
+
+            <form id="controls-soundeffect-form" class="difficulty-controls">
+              <label>
+                Tap
+                <input
+                  type="radio"
+                  name="shoot-sound-option"
+                  value="1"
+                  checked
+                />
+              </label>
+              <label>
+                Pistol
+                <input type="radio" name="shoot-sound-option" value="2" />
+              </label>
+
+              <label>
+                Eagle
+                <input type="radio" name="shoot-sound-option" value="3" />
+              </label>
+
+              <label>
+                Shoot Gun
+                <input type="radio" name="shoot-sound-option" value="4" />
+              </label>
+            </form>
+          </div>
+        </div>
+      </aside>
+
+      <main id="app">
+        <div id="canvas-container">
+          <canvas id="canvas"></canvas>
+        </div>
+      </main>
+    </div>
+
+    <audio
+      id="shoot-sound-option-1"
+      src="tap_sound_effect.mp3"
+      preload="metadata"
+    ></audio>
+    <audio
+      id="shoot-sound-option-2"
+      src="shoot_sound_1.mp3"
+      preload="metadata"
+    ></audio>
+    <audio
+      id="shoot-sound-option-3"
+      src="shoot_sound_2.mp3"
+      preload="metadata"
+    ></audio>
+    <audio
+      id="shoot-sound-option-4"
+      src="shoot_sound_3.mp3"
+      preload="metadata"
+    ></audio>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
