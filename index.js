@@ -118,7 +118,8 @@ function clickCanvasHandler(event) {
 }
 
 function initializeControls(key) {
-  const savedValue = localStorage.getItem(key) ?? "1";
+  const savedValue =
+    (localStorage.getItem(key) ?? key === DIFFICULTY_OPTIONS_KEY) ? "10" : "1";
   localStorage.setItem(key, savedValue);
 
   const options = document.getElementsByName(key);
